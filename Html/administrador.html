@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabla de Juegos</title>
+  <link rel="stylesheet" type="text/css" href="/Css/administrador.css">
+</head>
+<body>
+  <h1>ADMINISTRADOR</h1>
+
+  <form id="gameForm">
+    <input type="text" id="gameNameInput" placeholder="Nombre del juego" required>
+    <input type="text" id="gameDescriptionInput" placeholder="Descripción del juego" required>
+    <input type="text" id="gameCategoryInput" placeholder="Categoría" required>
+    <input type="text" id="gameCodeInput" placeholder="Código" required>
+    <button type="submit">Agregar</button>
+  </form>
+
+  <table id="gamesTable">
+    <thead>
+      <tr>
+        <th>Nombre del juego</th>
+        <th>Descripción</th>
+        <th>Categoría</th>
+        <th>Código</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Aquí se agregarán los registros dinámicamente -->
+    </tbody>
+  </table>
+
+  <script src="/Js/administrador.js"></script>
+</body>
+</html>
