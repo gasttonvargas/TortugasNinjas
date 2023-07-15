@@ -35,18 +35,34 @@
    const codeCell = document.createElement('td');
    codeCell.textContent = game.code;
    row.appendChild(codeCell);
- 
-   const actionsCell = document.createElement('td');
-   const editButton = document.createElement('button');
+   const editCell = document.createElement('td');
+
+  /* const editButton = document.createElement('button');
    editButton.textContent = 'Editar';
+   editButton.className = 'btn btn-primary btn-sm';
    editButton.addEventListener('click', () => editGame(game));
    actionsCell.appendChild(editButton);
- 
+   
    const deleteButton = document.createElement('button');
    deleteButton.textContent = 'Eliminar';
+   deleteButton.className = 'btn btn-danger btn-sm';
    deleteButton.addEventListener('click', () => deleteGame(game));
    actionsCell.appendChild(deleteButton);
+   
+   const actionsCell = document.createElement('td');*/
+   const editIcon = document.createElement('i');
+   editIcon.className = 'fas fa-edit';
+   editIcon.addEventListener('click', () => editGame(game));
+   editCell.appendChild(editIcon);
+   row.appendChild(editCell);
+
  
+   const actionsCell = document.createElement('td')
+   const deleteIcon = document.createElement('i');
+   deleteIcon.className = 'bi bi-trash3';
+   deleteIcon.addEventListener('click', () => deleteGame(game));
+   actionsCell.appendChild(deleteIcon);
+   
    row.appendChild(actionsCell);
  
    gamesTable.querySelector('tbody').appendChild(row);
@@ -68,7 +84,9 @@
      localStorage.setItem('games', JSON.stringify(games));
      gamesTable.querySelector('tbody').innerHTML = '';
      loadGames();
+     
    }
+   
  }
  
  // Cargar los datos de un juego en el formulario para editar
@@ -129,3 +147,5 @@
    loadGames();
    gameForm.addEventListener('submit', addGame);
  });
+ const addGameBtn = document.getElementById('addGameBtn');
+

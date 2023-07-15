@@ -3,33 +3,113 @@
 <head>
   <title>Tabla de Juegos</title>
   <link rel="stylesheet" type="text/css" href="/Css/administrador.css">
-</head>
-<body>
-  <h1>hola gaston</h1>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/sweetalert2@10.0.2/dist/sweetalert2.min.css">
 
-  <form id="gameForm">
-    <input type="text" id="gameNameInput" placeholder="Nombre del juego" required>
+</head>
+<body style="background-color: #653B7D;">
+  
+    <h1>ADMINISTRADOR</h1>
+   
+<div class="conteiner-fluid">
+    <div class="container">
+        <div class="row justify-content-between">
+          <div class="col-md-3">
+            <div class="card" style="width: 18rem;">
+              <div class="card-body" style="background-color: #E2CEED;" >
+                <form id="gameForm">
+                  <div class="form-group">
+                    <label for="gameNameInput">Nombre del juego</label>
+                    <input type="text" id="gameNameInput" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="gameDescriptionInput">Descripción del juego</label>
+                    <input type="text" id="gameDescriptionInput" class="form-control" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="gameCategoryInput">Categoría</label>
+                    <input type="text" id="gameCategoryInput" class="form-control" required >
+                  </div>
+                  <div class="form-group">
+                    <label for="gameCodeInput">Código</label>
+                    <input type="text" id="gameCodeInput" class="form-control" required>
+                  </div>
+                  <button type="submit" class="btn" style="background-color: #A562CF;">Agregar</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+ <!-- <form id="gameForm" class="container-sm">
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="gameNameInput">Nombre del juego</label>
+        <input type="text" id="gameNameInput" class="form-control" required>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="gameDescriptionInput">Descripción del juego</label>
+        <input type="text" id="gameDescriptionInput" class="form-control" required>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group col-md-4">
+        <label for="gameCategoryInput">Categoría</label>
+        <input type="text" id="gameCategoryInput" class="form-control" required>
+      </div>
+      <div class="form-group col-md-4">
+        <label for="gameCodeInput">Código</label>
+        <input type="text" id="gameCodeInput" class="form-control" required>
+      </div>
+    </div>
+    <div class="form-group col-md-6">
+    <button type="submit" class="btn btn-primary">Agregar</button>
+    </div>
+  </form>
+  <br>
+  <br>
+ <form id="gameForm" class="">
+    <input type="text" id="gameNameInput" placeholder="Nombre del juego" required >
     <input type="text" id="gameDescriptionInput" placeholder="Descripción del juego" required>
     <input type="text" id="gameCategoryInput" placeholder="Categoría" required>
     <input type="text" id="gameCodeInput" placeholder="Código" required>
-    <button type="submit">Agregar</button>
-  </form>
+    <button type="submit" class="btn btn-primary btn-sm">Agregar</button>
+  </form> -->
+<br>
+<br>
 
-  <table id="gamesTable">
+
+
+  <div class="container">
+  <div class="table-responsive">
+  <table id="gamesTable" class="table table-dark table-striped table-hover ">
     <thead>
       <tr>
         <th>Nombre del juego</th>
         <th>Descripción</th>
         <th>Categoría</th>
         <th>Código</th>
-        <th>Acciones</th>
+        <th></th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <!-- Aquí se agregarán los registros dinámicamente -->
     </tbody>
   </table>
+  </div>
+  </div>
+
+</div>
+
+
 
   <script src="/Js/administrador.js"></script>
+
 </body>
 </html>
+
+
