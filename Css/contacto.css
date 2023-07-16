@@ -1,20 +1,139 @@
-
-body {
-  padding: 20px;
-  background-color: whitesmoke;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-form {
-  max-width: 500px;
-  margin: 0 auto;
-}
-
-.form-group {
-  margin-bottom: 20px;
+main{
+  padding-top: 51px;
 }
 
 
+a.ahover:hover{
+font-size: 1.1em;
+}
+
+
+/*--------------------------------- Body ---------------------------------*/
+
+.bgindexbody{
+background-color: #1c1c1c;
+background-image:url(/imagenes/textura\ lineas.png) ;
+background-repeat: no-repeat;
+background-size: auto 100vh;
+background-attachment: fixed;
+background-position: center top;
+}
+.bgtranslucido{
+background-color: #000000e9;
+}
+
+.bgtranslucido2{
+background-color: #0000005e;
+border: none;
+}
+
+.bgslider{
+background-image:url(/imagenes/fondo-slider.PNG) ;
+background-size: 100% 100%;
+}
+
+
+/*--------------------------------- NAVBAR ---------------------------------*/
+.img-navbar{
+width: 50px;
+height: 50px;
+}
+.iconos-navbar{
+width: 35px;
+height: 35px;
+}
+
+.sombreado{
+box-shadow: 0px 1px 3px rgb(171, 165, 165) ;
+}
+
+nav a:hover{
+font-size: 1.1em;
+}
+
+
+/* --------------------------------- main ---------------------------------*/
+
+.bg-publicidad{
+background-color: #000000;
+}
+
+.bglink{
+border: #000000;
+background: linear-gradient(354deg, rgb(109, 109, 92) 14%, rgba(255,253,253,0.7483368347338936) 61%);
+color: #000000;
+}
+
+a.bglink:hover{
+background-color: rgb(255, 255, 255);
+box-shadow: 0px 0px 10px rgb(216, 216, 216) ;
+border: none;
+}
+
+
+/*--------------------------------- contacto ---------------------------------*/
+textarea{
+resize: none;
+}
+button.btnhover:hover{
+background-color: rgb(255, 255, 255);
+box-shadow: 0px 0px 10px rgb(216, 216, 216) ;
+border: none;
+color: #000000;
+}
+
+
+
+/*--------------------------------- 404 ---------------------------------*/
+
+.bg404{
+background-color: #FFFFFF;
+}
+
+a.a404:hover{
+background: linear-gradient(90deg, rgb(109, 109, 92) 14%, rgba(176, 176, 176, 0.748) 61%);
+box-shadow: 0px 0px 10px rgb(216, 216, 216) ;
+border: none;
+color: #000000;
+font-size: 1.1em;
+}
 
 
 
 
+
+/*--------------------------------- Login ---------------------------------*/
+
+.bgmodal{
+background-color: #000000f4;
+
+}
+
+.iconomodal{
+width: 35px;
+height: 35px;
+}
+@media screen and (max-width:991px){ /* COLUMNA DESAPARECE */
+.col-media{
+    display:none;
+}
+}
+
+@media screen and (max-width:220px){ /* LINEAS DESAPARECEN */
+hr{
+    display:none;
+}
+}
+a.linkmodal:hover{
+font-weight: 500;
+}
+img.iconomodal:hover{
+box-shadow: 0px 0px 10px rgb(255, 255, 255) ;
+border-radius: 50%;
+border: none;
+}
