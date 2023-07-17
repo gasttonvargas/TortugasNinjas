@@ -1,13 +1,15 @@
 
+body{
+  background-image: url(/Img/wallpaper.jpg);
+  
+}
 
+header{
+  background-color: rgba(39, 39, 39, 0.911);
+  margin-top: 55px;
+  margin-bottom: 20px;
+}
 
-/*--------------------------------- Body ---------------------------------*/
-
-
-
-
-
-/*--------------------------------- NAVBAR ---------------------------------*/
 .item{
   margin-left: 10px;
 
@@ -26,9 +28,10 @@
 }
 
 
-/* --------------------------------- main ---------------------------------*/
 
 
+<<<<<<< HEAD
+=======
 
 
 /*--------------------------------- contacto ---------------------------------*/
@@ -39,13 +42,6 @@ body {
   background-size: cover; 
 }
 
-.footer {
-    background-color: #151518;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-     
-}
 
 form {
   font-family: 'Times New Roman', Times, serif;
@@ -121,6 +117,7 @@ border-radius: 50%;
 border: none;
 }
 
+>>>>>>> 58612e2291de09d6dad67a6e0823b58defc99cde
 .footer {
   background-color: #151518;
   padding: 20px;
@@ -149,4 +146,5 @@ border: none;
   background-color: #fff !important;
   color: #000 !important;
 }
+
 
