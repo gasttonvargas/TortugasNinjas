@@ -39,13 +39,6 @@ body {
   background-size: cover; 
 }
 
-.footer {
-    background-color: #151518;
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-     
-}
 
 form {
   font-family: 'Times New Roman', Times, serif;
@@ -149,4 +142,5 @@ border: none;
   background-color: #fff !important;
   color: #000 !important;
 }
+
 
