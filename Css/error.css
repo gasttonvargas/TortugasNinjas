@@ -1,48 +1,46 @@
-/* * {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-} */
-
-
 body
 {
    background-image: url(/Img/fonditoGif.gif);
-   width: auto;
-   max-height: 100vh;
    background-repeat: no-repeat;
    background-size: cover;
-   background-attachment: fixed;
-   background-position: center center;
-   font-family: 'Press Start 2P', cursive;
-
+   background-position: center 90%;
+   font-family: 'Press Start 2P', cursive;   
 }
 
+@media (max-width: 280px) {
+   body {
+     background-size: cover;
+     background-position: 80% center;
+   }
+ }
 
-  
-    /* Agrega estas propiedades para hacer que el fondo sea responsive 
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-  
+ @media (max-width: 768px) {
+   #error, #numeroError {
+     font-size: 44px;
+     align-items: center;
+   }
+ }
+ 
+ @media (max-width: 576px) {
+   #error, #numeroError {
+     font-size: 32px;
+     align-items: center;
+   }
+ }
 
- Agrega estas propiedades para hacer que el contenido sea responsive
-section.d-block {
-    padding: 0 20px;
-    text-align: center;
-    height: 100%;
-    width: 100%;
-    max-width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
+ @media (max-width: 280px) {
+   #error, #numeroError, #loSiento {
+     font-size: 30px;
+     text-align: center;
+   }
+ }
+
 
 #loSiento {
-    color: #000000;
+   color: rgb(27, 27, 27); 
+   text-shadow: rgb(255, 255, 255) 0.1em 0.1em 0.2em;
 }
+
 
 
 .glitch-wrapper {
