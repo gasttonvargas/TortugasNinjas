@@ -1,10 +1,54 @@
 
+
+
+/*--------------------------------- Body ---------------------------------*/
+
+
+
+
+
+/*--------------------------------- NAVBAR ---------------------------------*/
+.item{
+  margin-left: 10px;
+
+}
+
+/*BOTONES NAVBAR*/
+#button1, #button2 {
+  background-color: #0050f0;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+#button1:hover, #button2:hover {
+  background-color: #e2ceed;
+  color: black;
+}
+
+
+/* --------------------------------- main ---------------------------------*/
+
+
+
+
+/*--------------------------------- contacto ---------------------------------*/
 body {
-  padding: 20px;
-  background-color: whitesmoke;
+  padding: 10px;
+  background: url(/Img/contacto/wallpaper.jpg);
+  background-attachment: fixed;
+  background-size: cover; 
+}
+
+.footer {
+    background-color: #151518;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+     
 }
 
 form {
+  font-family: 'Times New Roman', Times, serif;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -12,9 +56,97 @@ form {
 .form-group {
   margin-bottom: 20px;
 }
+button.btnhover:hover{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgb(216, 216, 216) ;
+  border: none;
+  color: #000000;
+}
+
+h4 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+  background-color: #000000ad;
+}
+
+
+/*--------------------------------- 404 ---------------------------------*/
+
+.bg404{
+background-color: #FFFFFF;
+}
+
+a.a404:hover{
+background: linear-gradient(90deg, rgb(109, 109, 92) 14%, rgba(176, 176, 176, 0.748) 61%);
+box-shadow: 0px 0px 10px rgb(216, 216, 216) ;
+border: none;
+color: #000000;
+font-size: 1.1em;
+}
 
 
 
 
 
+/*--------------------------------- Login ---------------------------------*/
+
+.bgmodal{
+background-color: #000000f4;
+
+}
+
+.iconomodal{
+width: 35px;
+height: 35px;
+}
+@media screen and (max-width:991px){ /* COLUMNA DESAPARECE */
+.col-media{
+    display:none;
+}
+}
+
+@media screen and (max-width:220px){ /* LINEAS DESAPARECEN */
+hr{
+    display:none;
+}
+}
+a.linkmodal:hover{
+font-weight: 500;
+}
+img.iconomodal:hover{
+box-shadow: 0px 0px 10px rgb(255, 255, 255) ;
+border-radius: 50%;
+border: none;
+}
+
+.footer {
+  background-color: #151518;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  background-color: #fff !important;
+  color: #b709e2 !important;
+}
+       
+.social-icon:hover,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .btn:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
 
