@@ -1,7 +1,7 @@
 body {
     background-color: #a562cf;
     font-family: 'Times New Roman', Times, serif;
-    background-image: url(/Img/wallpaper.jpg);
+    background-image: url(/Img/acerca/wallpaper.jpg);
     background-attachment: fixed;
     background-size: cover;
 
@@ -57,6 +57,17 @@ h2 {
   .navbar-dark .navbar-nav .btn:hover {
     background-color: #fff !important;
     color: #000 !important;
+  }
+
+  #button1, #button2 {
+    background-color: #0050f0;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  #button1:hover, #button2:hover {
+    background-color: #e2ceed;
+    color: black;
   }
 
         
