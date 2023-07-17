@@ -4,7 +4,7 @@ body{
 }
 
 header{
-  background-color: rgba(39, 39, 39, 0.863);
+  background-color: rgba(39, 39, 39, 0.911);
   margin-top: 55px;
   margin-bottom: 20px;
 }
@@ -103,18 +103,31 @@ header{
 
 #tittle{
   margin-left: 30px;
+  font-size: 20px;
 }
 #tittle1{
   margin-left: 30px;
+  font-size: 20px;
 }
 #tittle2{
   margin-left: 30px;
+  font-size: 20px;
 }
 #tittle3{
   margin-left: 30px;
+  font-size: 20px;
 }
 #tittle4{
   margin-left: 30px;
+  font-size: 30px;
+}
+h1{
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: #f80303 0.1em 0.1em 0.2em;
+}
+h2,h3{
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: #e0f803 0.1em 0.1em 0.2em;
 }
 
 /*FOOTER*/
