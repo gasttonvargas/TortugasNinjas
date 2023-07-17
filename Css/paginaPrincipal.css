@@ -26,6 +26,38 @@ header{
   color: black;
 }
 
+/*LUPA BUSQUEDA*/
+.search-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+#search-input {
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+#search-btn {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  font-size: 16px;
+  border: none;
+  background-color: #ccc;
+  color: #333;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+}
+
+.logotipo{
+  max-width: 100px;
+  background: #fffafa;
+}
+
 /*CAROUSEL*/
 .carousel-item img {
   max-width: 100%;
@@ -160,33 +192,91 @@ h2,h3{
   color: #000 !important;
 }
         
-.search-container {
+/*PRELOADER*/
+.containerc {
+  position: fixed;
+  background-image: url(/Img/fondo.jpg);
+  background-size: cover;
+  background-position: center 90%;
+  background-repeat: no-repeat;
+  color: #fff;
+  width: 100%;
+  z-index: 100000;
+  height: 100vh;
+  display: flex; 
+  top: 0;
+  left: 0;
+  font-family: 'Press Start 2P', cursive;
+
+}
+
+h2{
+  color: white;
+}
+
+/* estilo de carga de la pagina */
+.progress-bar {
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 10px;
+  width: 0%; /* Inicialmente sin ancho (0%) */
+  transition: width 2s ease-in-out; /* Transición suave de la barra de progreso */
+}
+
+.content {
+  display: block;
+  text-align: center;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 18px;
+  padding: 20px;
+  background-color: #fff;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+
+.containerc {
   display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: flex-end;
-  margin-right: 20px;
+  height: 100vh;
 }
 
-#search-input {
-  padding: 8px;
-  font-size: 16px;
-  border: none;
-  border-radius: 4px 0 0 4px;
-}
-
-#search-btn {
-  width: 40px;
-  height: 40px;
-  padding: 2px;
-  font-size: 16px;
-  border: none;
-  background-color: #ccc;
+.preloader {
+  text-align: center;
   color: #333;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+  text-align: center;
+  color: #333;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out; /* Cambiamos la duración de la transición a 0.5s */
 }
 
-.logotipo{
-  max-width: 100px;
-  background: #fffafa;
+.mario img {
+  display: block;
+  margin: 0 auto;
+}
+
+
+.loading-text {
+  text-align: center;
+  font-family: 'Press Start 2P', sans-serif;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 10px;
+}
+
+.cerrar {
+  opacity: 0;
+  pointer-events: none; 
+}
+
+
+.cerrar {
+  transform: translateY(-100%);
+  transition: 2s;
+}
+
+.preloader.hidden {
+  display: none;
 }
