@@ -1,92 +1,75 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-main{
-  padding-top: 51px;
-}
 
-
-a.ahover:hover{
-font-size: 1.1em;
-}
 
 
 /*--------------------------------- Body ---------------------------------*/
 
-.bgindexbody{
-background-color: #1c1c1c;
-background-image:url(/imagenes/textura\ lineas.png) ;
-background-repeat: no-repeat;
-background-size: auto 100vh;
-background-attachment: fixed;
-background-position: center top;
-}
-.bgtranslucido{
-background-color: #000000e9;
-}
 
-.bgtranslucido2{
-background-color: #0000005e;
-border: none;
-}
 
-.bgslider{
-background-image:url(/imagenes/fondo-slider.PNG) ;
-background-size: 100% 100%;
-}
 
 
 /*--------------------------------- NAVBAR ---------------------------------*/
-.img-navbar{
-width: 50px;
-height: 50px;
-}
-.iconos-navbar{
-width: 35px;
-height: 35px;
+.item{
+  margin-left: 10px;
+
 }
 
-.sombreado{
-box-shadow: 0px 1px 3px rgb(171, 165, 165) ;
+/*BOTONES NAVBAR*/
+#button1, #button2 {
+  background-color: #0050f0;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-nav a:hover{
-font-size: 1.1em;
+#button1:hover, #button2:hover {
+  background-color: #e2ceed;
+  color: black;
 }
 
 
 /* --------------------------------- main ---------------------------------*/
 
-.bg-publicidad{
-background-color: #000000;
-}
 
-.bglink{
-border: #000000;
-background: linear-gradient(354deg, rgb(109, 109, 92) 14%, rgba(255,253,253,0.7483368347338936) 61%);
-color: #000000;
-}
-
-a.bglink:hover{
-background-color: rgb(255, 255, 255);
-box-shadow: 0px 0px 10px rgb(216, 216, 216) ;
-border: none;
-}
 
 
 /*--------------------------------- contacto ---------------------------------*/
-textarea{
-resize: none;
-}
-button.btnhover:hover{
-background-color: rgb(255, 255, 255);
-box-shadow: 0px 0px 10px rgb(216, 216, 216) ;
-border: none;
-color: #000000;
+body {
+  padding: 10px;
+  background: url(/Img/contacto/wallpaper.jpg);
+  background-attachment: fixed;
+  background-size: cover; 
 }
 
+.footer {
+    background-color: #151518;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+     
+}
+
+form {
+  font-family: 'Times New Roman', Times, serif;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+button.btnhover:hover{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 0px 10px rgb(216, 216, 216) ;
+  border: none;
+  color: #000000;
+}
+
+h4 {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.container {
+  background-color: #000000ad;
+}
 
 
 /*--------------------------------- 404 ---------------------------------*/
@@ -137,3 +120,33 @@ box-shadow: 0px 0px 10px rgb(255, 255, 255) ;
 border-radius: 50%;
 border: none;
 }
+
+.footer {
+  background-color: #151518;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  background-color: #fff !important;
+  color: #b709e2 !important;
+}
+       
+.social-icon:hover,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .btn:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
+
