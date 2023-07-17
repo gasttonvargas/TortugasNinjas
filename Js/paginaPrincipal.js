@@ -47,7 +47,7 @@ formLogin.addEventListener("submit", (event) => {
     if(passLogin.length === 0){
         inicioSesion = false;
         alertaPasswordLogin.style.color = "#ff0000";
-        alertaPasswordLogin.innerHTML = "Contrase単a no ingresada"
+        alertaPasswordLogin.innerHTML = "Contraseña no ingresada"
     }
 
     if(!inicioSesion){
@@ -56,6 +56,37 @@ formLogin.addEventListener("submit", (event) => {
     
     if(usuariosRegistrados != null){
         let cantidadUsuarios = usuariosRegistrados.length
+    
+        let index = indiceEmailRegistrado(usuariosRegistrados, emailLogin, cantidadUsuarios);
+    
+        if(index === -1){
+            if(emailLogin === usuarioAdministrador["email"]){
+                if(passLogin === usuarioAdministrador["password"]){
+
+                    setTimeout(()=>{
+                        window.location.href = "administrador.html"
+                    }, 1000)
+                }
+                else{
+                    alertaPasswordLogin.style.color = "#ff0000";
+                    alertaPasswordLogin.innerHTML = "Contraseña e email no coinciden"
+                }
+            }else{
+                alertaEmailLogin.style.color = "#ff0000";
+                alertaEmailLogin.innerHTML = "Email no registrado"
+            }
+
+        }else{
+            if(usuariosRegistrados[index]["password"] == passLogin){
+                setTimeout(()=>{
+                    window.location.href = "paginaPrincipal.html"
+                }, 1000)
+            }else{
+                alertaPasswordLogin.style.color = "#ff0000";
+                alertaPasswordLogin.innerHTML = "Contraseña e email no coinciden"
+            }
+        }
+
     }else{
         if(emailLogin === usuarioAdministrador["email"]){
             if(passLogin === usuarioAdministrador["password"]){
@@ -66,7 +97,7 @@ formLogin.addEventListener("submit", (event) => {
             }
             else{
                 alertaPasswordLogin.style.color = "#ff0000";
-                alertaPasswordLogin.innerHTML = "Contrase単a o email no coinciden"
+                alertaPasswordLogin.innerHTML = "Contraseña o email no coinciden"
             }
         }else{
             alertaEmailLogin.style.color = "#ff0000";
@@ -84,39 +115,10 @@ formLogin.addEventListener("submit", (event) => {
                 return indice
             }
 
-            if(i === cantidadUsuarios - 1){
+            if(i === cantidadUsuariosEnBase - 1){
                 return indice
             }
         }
     }
 
-    let index = indiceEmailRegistrado(usuariosRegistrados, emailLogin, cantidadUsuarios);
-    
-    if(index === -1){
-        if(emailLogin === usuarioAdministrador["email"]){
-            if(passLogin === usuarioAdministrador["password"]){
-
-                setTimeout(()=>{
-                    window.location.href = "administrador.html"
-                }, 1000)
-            }
-            else{
-                alertaPasswordLogin.style.color = "#ff0000";
-                alertaPasswordLogin.innerHTML = "Contrase単a e email no coinciden"
-            }
-        }else{
-            alertaEmailLogin.style.color = "#ff0000";
-            alertaEmailLogin.innerHTML = "Email no registrado"
-        }
-
-    }else{
-        if(usuariosRegistrados[index]["password"] == passLogin){
-            setTimeout(()=>{
-                window.location.href = "paginaPrincipal.html"
-            }, 1000)
-        }else{
-            alertaPasswordLogin.style.color = "#ff0000";
-            alertaPasswordLogin.innerHTML = "Contrase単a e email no coinciden"
-        }
-    }
 })
