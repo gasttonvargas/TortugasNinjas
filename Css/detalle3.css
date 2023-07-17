@@ -181,3 +181,21 @@
     max-width: 100px;
     background: #fffafa;
   }
+
+  @media screen and (max-width:580px){ /* COLUMNA DESAPARECE */
+    .columna-imagen{
+      display: none;
+  }
+  
+  }
+  .tamano-ojo{
+  width: 175%;
+  height: 100%;
+  }
+  
+  .btn-ojo{
+  background-color: white;
+  border: 0;
+  width: 30px;
+  height: 30px;
+  }
