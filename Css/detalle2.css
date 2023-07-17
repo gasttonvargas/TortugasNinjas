@@ -1,0 +1,183 @@
+.degrade{
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  body {
+      background-image: url(/Img/wallpaper.jpg);
+      color: antiquewhite;
+  }
+  
+  h1{
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: rgb(25, 86, 255) 0.1em 0.1em 0.2em;
+  }
+  
+  
+  h2 {
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: rgb(255, 255, 25) 0.1em 0.1em 0.2em;
+  }
+  
+  h1 {
+    margin-top: 10%;
+  }
+  #boton1, #boton2 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    width: 50vh;
+    ;
+  }
+  
+  
+  
+  #boton1:hover, #boton2:hover {
+    background-color: #e2ceed;
+    color: black;
+  }
+  
+  @media (max-width: 280px) {
+    h1 {
+      font-size: 25px;
+      text-align: center;
+      margin-top: 30%;
+    }
+    #boton1, #boton2 {
+      width: 150px;
+    }
+    h2 {
+      font-size: 15px;
+    }
+    #pacmansito {
+      width: 200px;
+    }
+    .lead {
+      font-size: small;
+      text-align: center;
+    }
+    #divsito {
+      margin-right: 20%;
+      width: 200px;
+    }
+  }
+  
+  #button1, #button2 {
+    background-color: #0050f0;
+    color: white;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  
+  #button1:hover, #button2:hover {
+    background-color: #e2ceed;
+    color: black;
+  }
+  
+  .item{
+    margin-left: 10px;
+  }
+  
+  
+  
+  /*CAROUSEL*/
+  .carousel-item img {
+      max-width: 100%;
+      height: auto;
+    }
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon{
+      padding-left: 1rem;
+    }  
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      background-color: rgba(50, 50, 50, 0.5);
+      border: none;
+      outline: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+    } 
+    .carousel-control-prev-icon:hover,
+    .carousel-control-next-icon:hover {
+      background-color: rgb(0, 0, 0);
+    }
+    
+  /*HOVER Y CARDS*/
+  .card-custom {
+    width: 18rem !important;
+    margin-left: 15px;
+  }
+  
+  #carouselExample .card.card-custom {
+    background-color: rgba(88, 88, 88, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  #carouselExample .card.card-custom:hover {
+    transform: scale(1.1);
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+    
+    
+    #carouselExample2 .card.card-custom {
+      background-color: rgba(27, 27, 27, 0.5);;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    #carouselExample2 .card.card-custom:hover {
+      transform: scale(1.1);
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    #carouselExample3 .card.card-custom {
+      background-color: rgba(27, 27, 27, 0.5);;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    #carouselExample3 .card.card-custom:hover {
+      transform: scale(1.1);
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    #carouselExample4 .card.card-custom {
+      background-color: rgba(27, 27, 27, 0.5);;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+    
+    #carouselExample4 .card.card-custom:hover {
+      transform: scale(1.1);
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+  
+    /*FOOTER*/
+  .footer {
+    background-color: #151518;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .social-icon:hover {
+    background-color: #fff !important;
+    color: #b709e2 !important;
+  }
+         
+  .social-icon:hover,
+  .navbar-dark .navbar-nav .nav-link:hover,
+  .navbar-dark .navbar-nav .btn:hover {
+    background-color: #fff !important;
+    color: #000 !important;
+  }
+  
+  .logotipo{
+    max-width: 100px;
+    background: #fffafa;
+  }

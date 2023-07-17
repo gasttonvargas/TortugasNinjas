@@ -119,9 +119,15 @@ formRegistro.addEventListener("submit", (event) => {
     if(nickUsado){
         alertaNickname.style.color = "#ff0000";
         alertaNickname.innerHTML = "Nombre de usuario usado"
+
         valido = false
         validoNick = false
     }else if(validoNick){
+
+        // return;
+        valido = false
+    }else{
+
         alertaNickname.style.color = "#008000";
         alertaNickname.innerHTML = "Nombre de usuario válido"
     }
@@ -134,7 +140,11 @@ formRegistro.addEventListener("submit", (event) => {
         alertaEmail.style.color = "#ff0000";
         alertaEmail.innerHTML = "Email usado"
         valido = false
+
     }else if(validoEmail){
+
+        // return;
+    }else{
         alertaEmail.style.color = "#008000";
         alertaEmail.innerHTML = "Email válido"
     }
@@ -156,6 +166,7 @@ formRegistro.addEventListener("submit", (event) => {
         alertaEmail.innerHTML = ""
         alertaPassword.innerHTML = ""
 
+
         setTimeout(()=>{
             formRegistro.classList.add("hidden")
         }, 500)
@@ -167,6 +178,7 @@ formRegistro.addEventListener("submit", (event) => {
         setTimeout(()=>{
             window.location.href = "paginaPrincipal.html"
         }, 5000)
+
 
         formRegistro.reset()
     }
