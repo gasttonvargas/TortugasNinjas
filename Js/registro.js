@@ -111,7 +111,11 @@ formRegistro.addEventListener("submit", (event) => {
     if(nickUsado){
         alertaNickname.style.color = "#ff0000";
         alertaNickname.innerHTML = "Nombre de usuario usado"
-        return;
+        // return;
+        valido = false
+    }else{
+        alertaNickname.style.color = "#008000";
+        alertaNickname.innerHTML = "Nombre de usuario válido"
     }
 
     let emailUsado = usuarios.find(usuarios => 
@@ -121,7 +125,11 @@ formRegistro.addEventListener("submit", (event) => {
     if(emailUsado){
         alertaEmail.style.color = "#ff0000";
         alertaEmail.innerHTML = "Email usado"
-        return;
+        valido = false
+        // return;
+    }else{
+        alertaEmail.style.color = "#008000";
+        alertaEmail.innerHTML = "Email válido"
     }
 
     if(valido){
@@ -140,6 +148,11 @@ formRegistro.addEventListener("submit", (event) => {
         alertaNickname.innerHTML = ""
         alertaEmail.innerHTML = ""
         alertaPassword.innerHTML = ""
+
+        // setTimeout(() => {
+        //     console.log("se registro")
+        // }, 10000)
+
         formRegistro.reset()
     }
 })
