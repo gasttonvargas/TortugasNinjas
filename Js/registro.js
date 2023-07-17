@@ -1,4 +1,5 @@
 let formRegistro = document.getElementById("formRegistro")
+let registroExitoso = document.getElementById("registroExitoso")
 let usuarios = []
 const alertaNombre = document.getElementById("alertaNombre")
 const alertaApellido = document.getElementById("alertaApellido")
@@ -24,7 +25,10 @@ formRegistro.addEventListener("submit", (event) => {
     let validacionEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/
     let validacionPassword = ""
     let validoEnContrasena = true
+
     let valido = true
+    let validoNick = true
+    let validoEmail = true
 
     if(nombreUsuario.length === 0){
         alertaNombre.style.color = "#ff0000";
@@ -56,20 +60,24 @@ formRegistro.addEventListener("submit", (event) => {
         alertaNickname.style.color = "#ff0000";
         alertaNickname.innerHTML = "Campo 'Nombre de usuario' no puede permanecer vacio"
         valido = false
+        validoNick = false
     }else if(nicknameUsuario.length < 5){
         alertaNickname.style.color = "#ff0000";
         alertaNickname.innerHTML = "Nombre de usuario muy corto"
         valido = false
+        validoNick = false
     }
 
     if(emailUsuario.length === 0){
         alertaEmail.style.color = "#ff0000";
         alertaEmail.innerHTML = "Campo 'Email' no puede permanecer vacio"
         valido = false
+        validoEmail = false
     }else if(!validacionEmail.test(emailUsuario)){
         alertaEmail.style.color = "#ff0000";
         alertaEmail.innerHTML = "Email no valido"
         valido = false
+        validoEmail = false
     }
 
     if(passUsuario.length === 0){
@@ -111,7 +119,11 @@ formRegistro.addEventListener("submit", (event) => {
     if(nickUsado){
         alertaNickname.style.color = "#ff0000";
         alertaNickname.innerHTML = "Nombre de usuario usado"
-        return;
+        valido = false
+        validoNick = false
+    }else if(validoNick){
+        alertaNickname.style.color = "#008000";
+        alertaNickname.innerHTML = "Nombre de usuario válido"
     }
 
     let emailUsado = usuarios.find(usuarios => 
@@ -121,7 +133,10 @@ formRegistro.addEventListener("submit", (event) => {
     if(emailUsado){
         alertaEmail.style.color = "#ff0000";
         alertaEmail.innerHTML = "Email usado"
-        return;
+        valido = false
+    }else if(validoEmail){
+        alertaEmail.style.color = "#008000";
+        alertaEmail.innerHTML = "Email válido"
     }
 
     if(valido){
@@ -140,6 +155,19 @@ formRegistro.addEventListener("submit", (event) => {
         alertaNickname.innerHTML = ""
         alertaEmail.innerHTML = ""
         alertaPassword.innerHTML = ""
+
+        setTimeout(()=>{
+            formRegistro.classList.add("hidden")
+        }, 500)
+
+        setTimeout(()=>{
+            registroExitoso.classList.remove("hidden")
+        }, 1000)
+
+        setTimeout(()=>{
+            window.location.href = "paginaPrincipal.html"
+        }, 5000)
+
         formRegistro.reset()
     }
 })
