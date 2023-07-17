@@ -35,18 +35,24 @@
    const codeCell = document.createElement('td');
    codeCell.textContent = game.code;
    row.appendChild(codeCell);
+   
+   
+   const editCell = document.createElement('td');
+
  
-   const actionsCell = document.createElement('td');
-   const editButton = document.createElement('button');
-   editButton.textContent = 'Editar';
-   editButton.addEventListener('click', () => editGame(game));
-   actionsCell.appendChild(editButton);
+   const editIcon = document.createElement('i');
+   editIcon.className = 'fas fa-edit';
+   editIcon.addEventListener('click', () => editGame(game));
+   editCell.appendChild(editIcon);
+   row.appendChild(editCell);
+
  
-   const deleteButton = document.createElement('button');
-   deleteButton.textContent = 'Eliminar';
-   deleteButton.addEventListener('click', () => deleteGame(game));
-   actionsCell.appendChild(deleteButton);
- 
+   const actionsCell = document.createElement('td')
+   const deleteIcon = document.createElement('i');
+   deleteIcon.className = 'bi bi-trash3';
+   deleteIcon.addEventListener('click', () => deleteGame(game));
+   actionsCell.appendChild(deleteIcon);
+   
    row.appendChild(actionsCell);
  
    gamesTable.querySelector('tbody').appendChild(row);
@@ -68,7 +74,9 @@
      localStorage.setItem('games', JSON.stringify(games));
      gamesTable.querySelector('tbody').innerHTML = '';
      loadGames();
+     
    }
+   
  }
  
  // Cargar los datos de un juego en el formulario para editar
@@ -129,3 +137,28 @@
    loadGames();
    gameForm.addEventListener('submit', addGame);
  });
+ const addGameBtn = document.getElementById('addGameBtn');
+
+// Función para generar un código único de 6 caracteres
+function generateUniqueCode() {
+  const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+  let code = '';
+  for (let i = 0; i < 6; i++) {
+    const randomIndex = Math.floor(Math.random() * characters.length);
+    code += characters[randomIndex];
+  }
+  return code;
+}
+
+// Evento para generar y asignar el código único al campo de código
+document.getElementById('gameForm').addEventListener('submit', function(event) {
+  event.preventDefault();
+
+  // Generar el código único
+  const uniqueCode = generateUniqueCode();
+
+  // Asignar el código al campo de código
+  document.getElementById('gameCodeInput').value = uniqueCode;
+
+  // Aquí puedes agregar el código para agregar el juego a la tabla y almacenarlo en el Local Storage
+});

@@ -1,24 +1,69 @@
-table {
-    border-collapse: collapse;
-    width: 100%;
-  }
+
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  margin-bottom: 10px;
+}
+
+form input[type="text"] {
+  margin-bottom: 5px;
+}
+
+form button {
+  padding: 5px 10px;
+}
+
+#button1, #button2 {
+  background-color: #0050f0;
+  color: white;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   
-  th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    max-width: 300px;
-    margin-bottom: 10px;
-  }
-  
-  form input[type="text"] {
-    margin-bottom: 5px;
-  }
-  
-  form button {
-    padding: 5px 10px;
-  }
+}
+.item{
+  margin-left: 10px;
+  margin-top: 1,5%;
+
+}
+#button1:hover, #button2:hover {
+  background-color: #e2ceed;
+  color: black; }
+
+.navbar {
+  margin-top: -1%;
+}
+h2{
+  font-family: 'Press Start 2P', cursive;
+  text-shadow: #094370f5 0.1em 0.1em 0.2em;
+  color: #e2ceed;
+}
+/*FOOTER*/
+.footer {
+  background-color: #151518;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.social-icon:hover {
+  background-color: #fff !important;
+  color: #b709e2 !important;
+}
+       
+.social-icon:hover,
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .btn:hover {
+  background-color: #fff !important;
+  color: #000 !important;
+}
